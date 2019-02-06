@@ -30,8 +30,7 @@ app.use((req, res, next) => {
         ingredients: req.body.ingredients,
         instructions: req.body.instructions,
         difficulty: req.body.difficulty,
-        time: req.body.time,
-        _id: req.body._id
+        time: req.body.time
     });
     recipe.save().then(
       () => {
@@ -70,8 +69,7 @@ app.use((req, res, next) => {
         ingredients: req.body.ingredients,
         instructions: req.body.instructions,
         difficulty: req.body.difficulty,
-        time: req.body.time,
-        _id: req.body._id
+        time: req.body.time
     });
     Recipe.updateOne({_id: req.params.id}, recipe).then(
       () => {
